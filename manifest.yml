@@ -1,0 +1,13 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+applications:
+  - name: mysqlapp
+path: target/mysqlpcf.jar
+domain: cfapps.io
+memory: 1G
+instances: 1
+services:
+  - dev_db
